@@ -15,7 +15,6 @@ import { HeroRoute }   from './hero.routing';
     exports: [],
     declarations: [
         HeroComponent, 
-        HeroComponent, 
         HeroDetailComponent
     ],
     providers: [],

@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var common_1 = require("./common");
+var flickr_component_1 = require("./flickr/flickr.component");
 require("rxjs/add/operator/switchMap");
 var SkoolboRoute = (function () {
     function SkoolboRoute() {
@@ -25,7 +26,8 @@ SkoolboRoute = __decorate([
                 { path: 'google', redirectTo: 'http://google.com', pathMatch: 'full' },
                 { path: 'home', component: common_1.HomeComponent, },
                 { path: 'about', component: common_1.AboutComponent },
-                { path: 'category/:id', component: common_1.CategoryComponent }
+                { path: 'category/:id', component: common_1.CategoryComponent },
+                { path: 'kitten', component: flickr_component_1.FlickrComponent }
             ])
         ],
         exports: [router_1.RouterModule]

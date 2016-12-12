@@ -29,6 +29,7 @@ HeroModule = __decorate([
         exports: [],
         declarations: [
             hero_component_1.HeroComponent,
+            hero_component_1.HeroComponent,
             hero_detail_component_1.HeroDetailComponent
         ],
         providers: [],

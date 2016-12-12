@@ -12,6 +12,8 @@ import {
           HeroDetailComponent 
         } from './common';
 
+import { FlickrComponent } from './flickr/flickr.component';
+
 import 'rxjs/add/operator/switchMap';
 
 @NgModule({
@@ -22,7 +24,8 @@ import 'rxjs/add/operator/switchMap';
             { path: 'google', redirectTo:  'http://google.com', pathMatch: 'full' },
             { path : 'home',  component : HomeComponent, },
             { path : 'about', component : AboutComponent },
-            { path : 'category/:id', component : CategoryComponent }
+            { path : 'category/:id', component : CategoryComponent },
+            { path : 'kitten', component : FlickrComponent }
         ])
     ],
     exports: [RouterModule]

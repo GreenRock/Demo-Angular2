@@ -3,7 +3,7 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { SkoolboRoute } from './app.route';
 import { HeroModule } from './hero/hero.Module';
-
+import { HttpModule, JsonpModule } from '@angular/http';
 import { 
           AppComponent, 
           HomeComponent, 
@@ -13,7 +13,11 @@ import {
           HeroDetailComponent
         } from './common';
 
+import { FlickrComponent } from './flickr/flickr.component';
+
 import  { EventDirective } from './directives/event.directive';
+
+import { FlickrService } from "./services/flickr.Service";
 
 import './rxjs-extensions';
 
@@ -22,16 +26,19 @@ import './rxjs-extensions';
         BrowserModule,
         FormsModule,
         SkoolboRoute,
-        HeroModule
+        HeroModule,
+        HttpModule,
+        JsonpModule
     ],
-    providers: [],
+    providers: [FlickrService],
     exports: [],
     declarations: [
         AppComponent, 
         HomeComponent, 
         AboutComponent,
         CategoryComponent,
-        EventDirective
+        EventDirective,
+        FlickrComponent
     ],
     bootstrap: [AppComponent]
 })

@@ -11,30 +11,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
-var hero_component_1 = require("./hero.component");
-var hero_detail_component_1 = require("./hero.detail.component");
-var hero_routing_1 = require("./hero.routing");
-var HeroModule = (function () {
-    function HeroModule() {
+var app_route_1 = require("./app.route");
+var hero_Module_1 = require("./hero/hero.Module");
+var common_1 = require("./common");
+var event_directive_1 = require("./directives/event.directive");
+require("./rxjs-extensions");
+var MainModule = (function () {
+    function MainModule() {
     }
-    return HeroModule;
+    return MainModule;
 }());
-HeroModule = __decorate([
+MainModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
-            hero_routing_1.HeroRoute
-        ],
-        exports: [],
-        declarations: [
-            hero_component_1.HeroComponent,
-            hero_detail_component_1.HeroDetailComponent
+            app_route_1.SkoolboRoute,
+            hero_Module_1.HeroModule
         ],
         providers: [],
-        bootstrap: [hero_component_1.HeroComponent]
+        exports: [],
+        declarations: [
+            common_1.AppComponent,
+            common_1.HomeComponent,
+            common_1.AboutComponent,
+            common_1.CategoryComponent,
+            event_directive_1.EventDirective
+        ],
+        bootstrap: [common_1.AppComponent]
     }),
     __metadata("design:paramtypes", [])
-], HeroModule);
-exports.HeroModule = HeroModule;
-//# sourceMappingURL=hero.Module.js.map
+], MainModule);
+exports.MainModule = MainModule;
+//# sourceMappingURL=main.js.map

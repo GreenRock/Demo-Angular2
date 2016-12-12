@@ -1,0 +1,19 @@
+
+ 
+<input [(ngModel)]="keyword" />
+<button (click)="seach()">search</button>
+<template [ngIf]="flickrFeeds">
+    <table *ngFor="let item of flickrFeeds;let myIndex = index">
+        <tr>
+            <td>{{myIndex+1}}</td>
+            <td><img [src]="item.url" [alt]="item.title"></td>
+            <td>{{item.title}}</td>
+        </tr>
+    </table>
+    
+</template>
+<template [ngIf]="errorMessage">
+    <h2 >{{errorMessage}}</h2>
+</template>
+
+  

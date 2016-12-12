@@ -13,8 +13,11 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_route_1 = require("./app.route");
 var hero_Module_1 = require("./hero/hero.Module");
+var http_1 = require("@angular/http");
 var common_1 = require("./common");
+var flickr_component_1 = require("./flickr/flickr.component");
 var event_directive_1 = require("./directives/event.directive");
+var flickr_Service_1 = require("./services/flickr.Service");
 require("./rxjs-extensions");
 var MainModule = (function () {
     function MainModule() {
@@ -27,16 +30,19 @@ MainModule = __decorate([
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
             app_route_1.SkoolboRoute,
-            hero_Module_1.HeroModule
+            hero_Module_1.HeroModule,
+            http_1.HttpModule,
+            http_1.JsonpModule
         ],
-        providers: [],
+        providers: [flickr_Service_1.FlickrService],
         exports: [],
         declarations: [
             common_1.AppComponent,
             common_1.HomeComponent,
             common_1.AboutComponent,
             common_1.CategoryComponent,
-            event_directive_1.EventDirective
+            event_directive_1.EventDirective,
+            flickr_component_1.FlickrComponent
         ],
         bootstrap: [common_1.AppComponent]
     }),
