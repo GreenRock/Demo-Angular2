@@ -35,7 +35,7 @@ CategoryComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'category-component',
-        templateUrl: 'category-template.html',
+        templateUrl: '/templates/category-template.html',
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute,
         common_1.Location])

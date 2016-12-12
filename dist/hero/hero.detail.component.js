@@ -38,7 +38,7 @@ HeroDetailComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'hero-detail',
-        templateUrl: 'hero-detail-template.html',
+        templateUrl: '/templates/hero-detail-template.html',
         providers: [HeroService_1.HeroService]
     }),
     __metadata("design:paramtypes", [HeroService_1.HeroService,

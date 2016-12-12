@@ -8,7 +8,7 @@ import 'rxjs/add/operator/switchMap';
 @Component({
     moduleId: module.id,
     selector: 'category-component',
-    templateUrl: 'category-template.html',
+    templateUrl: '/templates/category-template.html',
 })
 export class CategoryComponent implements OnInit {
     @Input()

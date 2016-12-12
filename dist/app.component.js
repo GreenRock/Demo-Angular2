@@ -9,28 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var HeroService_1 = require("../services/HeroService");
-var HeroComponent = (function () {
-    function HeroComponent(heroService) {
-        this.heroService = heroService;
+var AppComponent = (function () {
+    function AppComponent() {
     }
-    HeroComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.heroService.getHeros().then(function (heros) { return _this.heros = heros; });
-    };
-    HeroComponent.prototype.onClick = function (hero) {
-        location.href = "/hero-detail/" + hero.Id;
-    };
-    return HeroComponent;
+    return AppComponent;
 }());
-HeroComponent = __decorate([
+AppComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'hero-component',
-        templateUrl: 'hero-template.html',
-        providers: [HeroService_1.HeroService]
+        selector: 'skoolbo-app',
+        templateUrl: '/templates/app-template.html'
     }),
-    __metadata("design:paramtypes", [HeroService_1.HeroService])
-], HeroComponent);
-exports.HeroComponent = HeroComponent;
-//# sourceMappingURL=hero.component.js.map
+    __metadata("design:paramtypes", [])
+], AppComponent);
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

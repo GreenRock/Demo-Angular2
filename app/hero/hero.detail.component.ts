@@ -9,7 +9,7 @@ import { Subject }  from 'rxjs/Subject';
 @Component({
     moduleId: module.id,
     selector: 'hero-detail',
-    templateUrl: 'hero-detail-template.html',
+    templateUrl: '/templates/hero-detail-template.html',
     providers: [HeroService]
 })
 export class HeroDetailComponent implements OnInit {

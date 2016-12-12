@@ -5,7 +5,7 @@ import { Hero } from '../services/Hero';
 @Component({
     moduleId: module.id,
     selector: 'hero-component',
-    templateUrl: 'hero-template.html',
+    templateUrl: '/templates/hero-template.html',
     providers: [HeroService]
 })
 export class HeroComponent implements OnInit {

@@ -9,19 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var HomeComponent = (function () {
-    function HomeComponent() {
+var HeroService_1 = require("../services/HeroService");
+var HeroComponent = (function () {
+    function HeroComponent(heroService) {
+        this.heroService = heroService;
     }
-    HomeComponent.prototype.ngOnInit = function () { };
-    return HomeComponent;
+    HeroComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.heroService.getHeros().then(function (heros) { return _this.heros = heros; });
+    };
+    HeroComponent.prototype.onClick = function (hero) {
+        location.href = "/hero-detail/" + hero.Id;
+    };
+    return HeroComponent;
 }());
-HomeComponent = __decorate([
+HeroComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'home-component',
-        templateUrl: 'home-template.html'
+        selector: 'hero-component',
+        templateUrl: '/templates/hero-template.html',
+        providers: [HeroService_1.HeroService]
     }),
-    __metadata("design:paramtypes", [])
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+    __metadata("design:paramtypes", [HeroService_1.HeroService])
+], HeroComponent);
+exports.HeroComponent = HeroComponent;
+//# sourceMappingURL=hero.component.js.map
