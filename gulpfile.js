@@ -14,13 +14,7 @@ gulp.task('clean', function () {
     return del(['dist/**/*', 'li/*']);
 });
 
-gulp.task("ts:build",['clean'], function () {
-    return tsProject.src()
-        .pipe(tsProject())
-        .js.pipe(gulp.dest("dist"));
-});
-
-gulp.task('copy:libs', function () {
+gulp.task('copy:libs',["clean"], function () {
     return gulp.src([
         'node_modules/core-js/client/shim.min.js',
         'node_modules/zone.js/dist/zone.js',
@@ -30,29 +24,30 @@ gulp.task('copy:libs', function () {
     .pipe(gulp.dest('lib'));
 });
 
-gulp.task('copy:html', ['copy:libs'] ,function () {
-    return gulp.src([
-        'app/**/*.html',
-        'app/*.html'
-    ])
-    .pipe(gulp.dest('dist'));
-});
 
-gulp.task('copy:js', ['copy:html'] ,function () {
-    return gulp.src([
-        'app/**/*.js',
-        'app/*.js'
-    ])
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('js:build', function () {
-    gulp.src(['dist/*.js', 'dist/**/*.js'])
+gulp.task('js:embed', ['copy:libs'], function () {
+    gulp.src(['app/*.js', 'app/**/*.js'])
         .pipe(embedTemplates())
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('js:compress' ,function (cb) {
+
+gulp.task('copy:js', ['js:embed'], function () {
+    return gulp.src([
+         'app/**/*.js',
+         'app/*.js',
+    ])
+    .pipe(gulp.dest('lib'));
+});
+
+gulp.task('delete:js', ['copy:js'], function () {
+    return del([
+         'app/**/*.js',
+         'app/*.js',
+    ]);
+});
+
+gulp.task('js:compress', ['delete:js'], function (cb) {
   pump([
         gulp.src(['dist/*.js', 'dist/**/*.js']),
         uglify(),
