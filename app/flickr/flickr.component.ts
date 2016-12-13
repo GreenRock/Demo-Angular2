@@ -7,7 +7,7 @@ enableProdMode();
 @Component({
     moduleId: module.id,
     selector: 'flickr-component',
-    templateUrl: '/templates/flickr-template.html',
+    templateUrl: 'flickr-template.html',
     providers: [FlickrService]
 })
 export class FlickrComponent implements OnInit {
