@@ -28,7 +28,9 @@ SkoolboRoute = __decorate([
                 { path: 'about', component: common_1.AboutComponent },
                 { path: 'category/:id', component: common_1.CategoryComponent },
                 { path: 'kitten', component: flickr_component_1.FlickrComponent }
-            ])
+            ], {
+                useHash: true
+            })
         ],
         exports: [router_1.RouterModule]
     }),

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions, URLSearchParams, Jsonp } from "@angular/http";
 
-import { Kitten, FlickrFeed } from "./flickrModel";
+import { FlickrFeed } from "./flickrModel";
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/Rx';
 @Injectable()

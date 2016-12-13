@@ -23,7 +23,9 @@ HeroRoute = __decorate([
             router_1.RouterModule.forRoot([
                 { path: 'hero', component: hero_component_1.HeroComponent },
                 { path: 'hero/:id', component: hero_detail_component_1.HeroDetailComponent },
-            ])
+            ], {
+                useHash: true
+            })
         ],
         exports: [router_1.RouterModule]
     }),

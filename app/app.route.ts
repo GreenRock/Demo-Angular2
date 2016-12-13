@@ -26,7 +26,9 @@ import 'rxjs/add/operator/switchMap';
             { path : 'about', component : AboutComponent },
             { path : 'category/:id', component : CategoryComponent },
             { path : 'kitten', component : FlickrComponent }
-        ])
+        ],{
+              useHash : true
+        })
     ],
     exports: [RouterModule]
 })

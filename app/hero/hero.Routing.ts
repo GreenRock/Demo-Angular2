@@ -12,7 +12,10 @@ import { HeroDetailComponent }   from './hero.detail.component';
         [
             { path : 'hero', component : HeroComponent },
             { path : 'hero/:id', component : HeroDetailComponent },
-        ])
+        ],
+        {
+              useHash : true
+        })
     ],
     exports: [RouterModule]
 })
