@@ -28,7 +28,8 @@
 
       // other libraries
       'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+      'ng2-validation': 'npm:ng2-validation/dist',
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -38,7 +39,11 @@
       },
       rxjs: {
         defaultExtension: 'js'
-      }
+      },
+      'ng2-validation': { 
+        defaultExtension: 'js',
+        main:'index.js'
+      },
     }
   });
 })(this);

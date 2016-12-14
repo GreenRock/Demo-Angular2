@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var common_1 = require("@angular/common");
-require("rxjs/add/operator/switchMap");
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var common_1 = require('@angular/common');
+require('rxjs/add/operator/switchMap');
 var CategoryComponent = (function () {
     function CategoryComponent(route, location) {
         this.route = route;
@@ -25,20 +25,19 @@ var CategoryComponent = (function () {
     CategoryComponent.prototype.goBack = function () {
         this.location.back();
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], CategoryComponent.prototype, "_id", void 0);
+    CategoryComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'category-component',
+            templateUrl: 'category-template.html',
+        }), 
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, common_1.Location])
+    ], CategoryComponent);
     return CategoryComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], CategoryComponent.prototype, "_id", void 0);
-CategoryComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'category-component',
-        templateUrl: 'category-template.html',
-    }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute,
-        common_1.Location])
-], CategoryComponent);
 exports.CategoryComponent = CategoryComponent;
 //# sourceMappingURL=category.component.js.map

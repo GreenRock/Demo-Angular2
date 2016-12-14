@@ -8,28 +8,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var hero_component_1 = require("./hero.component");
-var hero_detail_component_1 = require("./hero.detail.component");
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var hero_component_1 = require('./hero.component');
+var hero_detail_component_1 = require('./hero.detail.component');
 var HeroRoute = (function () {
     function HeroRoute() {
     }
+    HeroRoute = __decorate([
+        core_1.NgModule({
+            imports: [
+                router_1.RouterModule.forRoot([
+                    { path: 'hero', component: hero_component_1.HeroComponent },
+                    { path: 'hero/:id', component: hero_detail_component_1.HeroDetailComponent },
+                ], {
+                    useHash: true
+                })
+            ],
+            exports: [router_1.RouterModule]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], HeroRoute);
     return HeroRoute;
 }());
-HeroRoute = __decorate([
-    core_1.NgModule({
-        imports: [
-            router_1.RouterModule.forRoot([
-                { path: 'hero', component: hero_component_1.HeroComponent },
-                { path: 'hero/:id', component: hero_detail_component_1.HeroDetailComponent },
-            ], {
-                useHash: true
-            })
-        ],
-        exports: [router_1.RouterModule]
-    }),
-    __metadata("design:paramtypes", [])
-], HeroRoute);
 exports.HeroRoute = HeroRoute;
 //# sourceMappingURL=hero.routing.js.map

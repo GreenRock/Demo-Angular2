@@ -25,7 +25,7 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { SkoolboRoute } from './app.route';
 
 import { HeroModule } from './hero/hero.Module';
-
+import { CustomFormsModule } from 'ng2-validation'
 import './rxjs-extensions';
 
 @NgModule({
@@ -36,7 +36,8 @@ import './rxjs-extensions';
         HeroModule,
         HttpModule,
         JsonpModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        CustomFormsModule
     ],
     providers: [
         FlickrService

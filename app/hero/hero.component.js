@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var HeroService_1 = require("../services/HeroService");
+var core_1 = require('@angular/core');
+var HeroService_1 = require('../services/HeroService');
 var HeroComponent = (function () {
     function HeroComponent(heroService) {
         this.heroService = heroService;
@@ -21,16 +21,16 @@ var HeroComponent = (function () {
     HeroComponent.prototype.onClick = function (hero) {
         location.href = "/hero-detail/" + hero.Id;
     };
+    HeroComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'hero-component',
+            templateUrl: 'hero-template.html',
+            providers: [HeroService_1.HeroService]
+        }), 
+        __metadata('design:paramtypes', [HeroService_1.HeroService])
+    ], HeroComponent);
     return HeroComponent;
 }());
-HeroComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'hero-component',
-        templateUrl: 'hero-template.html',
-        providers: [HeroService_1.HeroService]
-    }),
-    __metadata("design:paramtypes", [HeroService_1.HeroService])
-], HeroComponent);
 exports.HeroComponent = HeroComponent;
 //# sourceMappingURL=hero.component.js.map

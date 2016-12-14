@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var authenticate_1 = require("./authenticate");
-var forms_1 = require("@angular/forms");
+var core_1 = require('@angular/core');
+var authenticate_1 = require('./authenticate');
+var forms_1 = require('@angular/forms');
 var AuthenticateComponent = (function () {
     function AuthenticateComponent(formBuilder) {
         this.formBuilder = formBuilder;
@@ -21,15 +21,15 @@ var AuthenticateComponent = (function () {
     AuthenticateComponent.prototype.submitForm = function (value) {
         console.info(value);
     };
+    AuthenticateComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'authenticate-form',
+            templateUrl: 'authenticate-template.html'
+        }), 
+        __metadata('design:paramtypes', [forms_1.FormBuilder])
+    ], AuthenticateComponent);
     return AuthenticateComponent;
 }());
-AuthenticateComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'authenticate-form',
-        templateUrl: 'authenticate-template.html'
-    }),
-    __metadata("design:paramtypes", [forms_1.FormBuilder])
-], AuthenticateComponent);
 exports.AuthenticateComponent = AuthenticateComponent;
 //# sourceMappingURL=authenticate.component.js.map

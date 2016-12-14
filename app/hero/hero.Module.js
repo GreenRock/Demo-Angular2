@@ -8,33 +8,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
-var hero_component_1 = require("./hero.component");
-var hero_detail_component_1 = require("./hero.detail.component");
-var hero_routing_1 = require("./hero.routing");
+var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
+var hero_component_1 = require('./hero.component');
+var hero_detail_component_1 = require('./hero.detail.component');
+var hero_routing_1 = require('./hero.routing');
 var HeroModule = (function () {
     function HeroModule() {
     }
+    HeroModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                hero_routing_1.HeroRoute
+            ],
+            exports: [],
+            declarations: [
+                hero_component_1.HeroComponent,
+                hero_detail_component_1.HeroDetailComponent
+            ],
+            providers: [],
+            bootstrap: [hero_component_1.HeroComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], HeroModule);
     return HeroModule;
 }());
-HeroModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            platform_browser_1.BrowserModule,
-            forms_1.FormsModule,
-            hero_routing_1.HeroRoute
-        ],
-        exports: [],
-        declarations: [
-            hero_component_1.HeroComponent,
-            hero_detail_component_1.HeroDetailComponent
-        ],
-        providers: [],
-        bootstrap: [hero_component_1.HeroComponent]
-    }),
-    __metadata("design:paramtypes", [])
-], HeroModule);
 exports.HeroModule = HeroModule;
 //# sourceMappingURL=hero.Module.js.map

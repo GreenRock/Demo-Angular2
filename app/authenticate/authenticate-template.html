@@ -12,5 +12,8 @@
           UserName is required
         </div>
 
+<input type="text" [(ngModel)]="registerForm.RePassword" name="RePassword" #rePassword="ngModel" [rangeLength]="[5, 9]"/>
+<p *ngIf="rePassword.errors?.rangeLength">error message</p>
+
   <button type="submit"  [disabled]="!registerForm.form.valid">Submit</button>
 </form>
