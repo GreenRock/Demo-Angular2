@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, HostListener  } from '@angular/core'
+import { Directive, ElementRef, Input, HostListener, Component  } from '@angular/core'
 
 @Directive({
     selector: "[click-me]"

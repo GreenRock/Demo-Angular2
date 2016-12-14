@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { SkoolboRoute } from './app.route';
-import { HeroModule } from './hero/hero.Module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+
+
+
 import { 
           AppComponent, 
           HomeComponent, 
@@ -19,6 +20,12 @@ import  { EventDirective } from './directives/event.directive';
 
 import { FlickrService } from "./services/flickr.Service";
 
+import { AuthenticateComponent } from './authenticate/authenticate.component';
+
+import { SkoolboRoute } from './app.route';
+
+import { HeroModule } from './hero/hero.Module';
+
 import './rxjs-extensions';
 
 @NgModule({
@@ -28,9 +35,12 @@ import './rxjs-extensions';
         SkoolboRoute,
         HeroModule,
         HttpModule,
-        JsonpModule
+        JsonpModule,
+        ReactiveFormsModule
     ],
-    providers: [FlickrService],
+    providers: [
+        FlickrService
+    ],
     exports: [],
     declarations: [
         AppComponent, 
@@ -38,7 +48,8 @@ import './rxjs-extensions';
         AboutComponent,
         CategoryComponent,
         EventDirective,
-        FlickrComponent
+        FlickrComponent,
+        AuthenticateComponent
     ],
     bootstrap: [AppComponent]
 })

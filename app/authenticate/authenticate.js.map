@@ -1,0 +1,1 @@
+{"version":3,"file":"authenticate.js","sourceRoot":"","sources":["authenticate.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,sCAA2C;AAG3C,IAAa,SAAS;IAClB;QACI,IAAI,CAAC,QAAQ,GAAG,EAAE,CAAC;QACnB,IAAI,CAAC,QAAQ,GAAG,EAAE,CAAC;IACvB,CAAC;IAGL,gBAAC;AAAD,CAAC,AAPD,IAOC;AAPY,SAAS;IADrB,iBAAU,EAAE;;GACA,SAAS,CAOrB;AAPY,8BAAS"}

@@ -1,0 +1,16 @@
+
+<form (ngSubmit)="submitForm(registerForm.form.value)" #registerForm="ngForm">
+
+  <label>Firstname:</label>
+  
+  <input type="text" class="form-control" id="userName"
+               required
+               [(ngModel)]="registerForm.UserName" name="userName"
+               #userName="ngModel">
+
+    <div [hidden]="(userName.valid || userName.pristine)"  class="alert alert-danger">
+          UserName is required
+        </div>
+
+  <button type="submit"  [disabled]="!registerForm.form.valid">Submit</button>
+</form>

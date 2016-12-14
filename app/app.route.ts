@@ -13,6 +13,7 @@ import {
         } from './common';
 
 import { FlickrComponent } from './flickr/flickr.component';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 import 'rxjs/add/operator/switchMap';
 
@@ -25,10 +26,9 @@ import 'rxjs/add/operator/switchMap';
             { path : 'home',  component : HomeComponent, },
             { path : 'about', component : AboutComponent },
             { path : 'category/:id', component : CategoryComponent },
-            { path : 'kitten', component : FlickrComponent }
-        ],{
-              useHash : true
-        })
+            { path : 'kitten', component : FlickrComponent },
+            { path: 'login', component: AuthenticateComponent }
+        ])
     ],
     exports: [RouterModule]
 })

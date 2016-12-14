@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var common_1 = require("./common");
 var flickr_component_1 = require("./flickr/flickr.component");
+var authenticate_component_1 = require("./authenticate/authenticate.component");
 require("rxjs/add/operator/switchMap");
 var SkoolboRoute = (function () {
     function SkoolboRoute() {
@@ -27,10 +28,9 @@ SkoolboRoute = __decorate([
                 { path: 'home', component: common_1.HomeComponent, },
                 { path: 'about', component: common_1.AboutComponent },
                 { path: 'category/:id', component: common_1.CategoryComponent },
-                { path: 'kitten', component: flickr_component_1.FlickrComponent }
-            ], {
-                useHash: true
-            })
+                { path: 'kitten', component: flickr_component_1.FlickrComponent },
+                { path: 'login', component: authenticate_component_1.AuthenticateComponent }
+            ])
         ],
         exports: [router_1.RouterModule]
     }),

@@ -37,7 +37,7 @@ gulp.task('copy:js', ['js:embed'], function () {
          'app/**/*.js',
          'app/*.js',
     ])
-    .pipe(gulp.dest('lib'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('delete:js', ['copy:js'], function () {
