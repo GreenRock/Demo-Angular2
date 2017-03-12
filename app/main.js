@@ -15,6 +15,7 @@ var http_1 = require('@angular/http');
 var common_1 = require('./common');
 var flickr_component_1 = require('./flickr/flickr.component');
 var event_directive_1 = require('./directives/event.directive');
+var generation_directive_1 = require('./directives/generation.directive');
 var flickr_Service_1 = require("./services/flickr.Service");
 var authenticate_component_1 = require('./authenticate/authenticate.component');
 var app_route_1 = require('./app.route');
@@ -46,8 +47,10 @@ var MainModule = (function () {
                 common_1.AboutComponent,
                 common_1.CategoryComponent,
                 event_directive_1.EventDirective,
+                generation_directive_1.GenerationHtml,
                 flickr_component_1.FlickrComponent,
-                authenticate_component_1.AuthenticateComponent
+                authenticate_component_1.AuthenticateComponent,
+                generation_directive_1.FormValidate
             ],
             bootstrap: [common_1.AppComponent]
         }), 

@@ -17,6 +17,7 @@ import {
 import { FlickrComponent } from './flickr/flickr.component';
 
 import  { EventDirective } from './directives/event.directive';
+import  { GenerationHtml, FormValidate } from './directives/generation.directive';
 
 import { FlickrService } from "./services/flickr.Service";
 
@@ -49,8 +50,10 @@ import './rxjs-extensions';
         AboutComponent,
         CategoryComponent,
         EventDirective,
+        GenerationHtml,
         FlickrComponent,
-        AuthenticateComponent
+        AuthenticateComponent,
+        FormValidate
     ],
     bootstrap: [AppComponent]
 })

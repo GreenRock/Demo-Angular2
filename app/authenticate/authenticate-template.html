@@ -1,16 +1,15 @@
 
-<form (ngSubmit)="submitForm(registerForm.form.value)" #registerForm="ngForm">
+<form (ngSubmit)="submitForm(registerForm.form.value)" #registerForm="ngForm" u-form>
 
   <label>Firstname:</label>
   
   <input type="text" class="form-control" id="userName"
-               required
-               [(ngModel)]="registerForm.UserName" name="userName"
-               #userName="ngModel">
-
+              name="userName"
+               u-required="'username required'">
+<!--
     <div [hidden]="(userName.valid || userName.pristine)"  class="alert alert-danger">
           UserName is required
-        </div>
+        </div>-->
 
 <input type="text" [(ngModel)]="registerForm.RePassword" name="RePassword" #rePassword="ngModel" [rangeLength]="[5, 9]"/>
 <p *ngIf="rePassword.errors?.rangeLength">error message</p>
